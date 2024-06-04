@@ -1,0 +1,220 @@
+@font-face {
+	font-family: 'MontserratBold';
+	src: url('../fonts/MontserratBold.ttf');
+}
+@font-face {
+	font-family: 'MontserratLight';
+	src: url('../fonts/MontserratLight.ttf');
+}
+@font-face {
+	font-family: 'Sensal';
+	src: url('../fonts/Sensal.ttf');
+}
+@font-face {
+	font-family: 'UbuntuMono';
+	src: url('../fonts/UbuntuMono-Bold.ttf');
+}
+@font-face {
+	font-family: 'Ysabeau';
+	src: url('../fonts/YsabeauSC-VariableFont_wght.ttf');
+}
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: Ysabeau;
+	background-color: #f0ead2;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+div#container {
+	margin: auto;
+	padding: 25px;
+}
+
+div#header {
+	padding-top: 25px;
+	padding-bottom: 25px;
+	width: 100%;
+	font-family: Sensal;
+	font-size: 60px;
+	font-weight: 800;
+	color: #f0ead2;
+	background-image: url('../images/bg.jpg');
+	background-size: 100% auto;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	text-align: center;
+	text-shadow: 0 0 5px #000;
+	border-radius: 20px;
+	user-select: none;
+}
+
+table#menu {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	border-spacing: 25px;
+	font-size: 20px;
+	text-transform: uppercase;
+	font-family: Ysabeau;
+	border-collapse: separate;
+}
+
+table#menu tr {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	border-spacing: 0;
+}
+
+table#menu td {
+	margin: 0;
+	padding: 0;
+	width: 20%;
+	border-spacing: 0;
+}
+
+table#menu td a {
+	display: block;
+	padding: 25px;
+	border-radius: 20px;
+	text-align: center;
+	background-color: #dde5b6;
+	box-shadow: inset 0 0 0 3px #adc178;
+	color: #6c584c;
+	user-select: none;
+	cursor: pointer;
+	transition: filter 0.2s ease, box-shadow 0.05s ease;
+}
+
+table#menu td a:hover {
+	filter: brightness(105%);
+}
+
+table#menu td a:active {
+	box-shadow: inset 0 0 0 6px #adc178;
+}
+
+table#menu td.currentTab a {
+	background-color: #6c584c;
+	color: #f0ead2;
+	box-shadow: inset 0 0 0 6px #a98467;
+	cursor: default;
+}
+
+table#menu td#login a {
+	background-color: #70b572;
+	color: #f0ead2;
+	box-shadow: inset 0 0 0 3px #5da05f;
+}
+
+table#menu td#login a:active {
+	box-shadow: inset 0 0 0 8px #5da05f;
+}
+
+hr.separate {
+	margin: 0;
+	margin-bottom: 25px;
+	padding: 0;
+	height: 3px;
+	border: none;
+	background-color: #adc178;
+	border-radius: 20px;
+}
+
+div#content {
+	width: 100%;
+	font-size: 20px;
+}
+
+table.contentHeader {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	border-spacing: 25px;
+	border-collapse: separate;
+}
+
+table.contentHeader td {
+	padding: 25px;
+	border-radius: 20px;
+}
+
+table.contentHeader td.note {
+	width: 30%;
+	background-color: #a98467;
+	color: #6c584c;
+}
+table.contentHeader td.note img {
+	border-radius: 15px;
+	cursor: pointer;
+}
+
+table.contentHeader td.teacherNote {
+	padding: 0;
+	width: 30%;
+	vertical-align: top;
+}
+
+table.contentHeader td.headline {
+	width: 70%;
+	background-color: #dde5b6;
+	color: #6c584c;
+}
+
+div#footer {
+	margin-top: 25px;
+	padding: 25px;
+	width: 100%;
+	background-color: #6c584c;
+	color: #a98467;
+	font-size: 20px;
+	text-align: center;
+	box-sizing: border-box;
+	border-radius: 20px;
+}
+
+div#footer div.footerIcon {
+	width: 60px;
+	height: 60px;
+	display: inline-block;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	cursor: pointer;
+	border-radius: 50%;
+}
+
+div#footer div.footerIcon.insta {
+	background-image: url('../images/instagram.png');
+}
+
+div#footer div.footerIcon.tiktok {
+	margin-left: 25px;
+	margin-right: 25px;
+	background-image: url('../images/tiktok.png');
+}
+
+div#footer div.footerIcon.web {
+	background-image: url('../images/web.png');
+}
+
+div#footer div.footerInfo {
+	margin-top: 25px;
+}
+
+div#footer div.footerIcon a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	padding: 10px; /* Добавляем отступы вокруг ссылок */
+	box-sizing: border-box; /* Учитываем отступы внутри ширины и высоты */
+}

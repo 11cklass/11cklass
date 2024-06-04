@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Сайт класса</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/gallery.css" />
+	</head>
+	<body>
+		<div id="container" class="col-xs-12 col-sm-12 col-md-8 col-lg-6 col-xl-6">
+			<div id="header">
+				<div class="mainLabel">11С Класс</div>
+			</div>
+			<table id="menu">
+				<tbody>
+					<tr>
+						<td><a href="/">ГЛАВНАЯ</a></td>
+						<td><a href="/class">КЛАСС</a></td>
+						<td><a href="/teacher">КЛАССНЫЙ РУКОВОДИТЕЛЬ</a></td>
+						<td class="currentTab"><a href="/gallery">ГАЛЕРЕЯ</a></td>
+					</tr>
+				</tbody>
+			</table>
+			<hr class="separate" />
+			<div id="content">
+				<table id="gallery">
+					<% for(let i = 0; i < images.length / 4; i++) { %>
+					<tr>
+						<% for(let j = 0; j < 4; j++) { %>
+						<td>
+							<% let index = i * 4 + j; %> <% if(images[index]) { %>
+							<img
+								src="/images/gallery/<%= images[index] %>"
+								alt="Image <%= index + 1 %>"
+								onclick="openPreview('/images/gallery/<%= images[index] %>')"
+							/>
+							<% } %>
+						</td>
+						<% } %>
+					</tr>
+					<% } %>
+				</table>
+			</div>
+			<div id="footer">
+				<div class="footerIcon insta">
+					<a href="https://www.instagram.com/vash_11c/">&nbsp;</a>
+				</div>
+				<div class="footerIcon tiktok">
+					<a href="https://www.tiktok.com/@nashklass25/">&nbsp;</a>
+				</div>
+				<div class="footerIcon web">
+					<a href="https://www.linnamae.tln.edu.ee/">&nbsp;</a>
+				</div>
+				<div class="footerInfo">
+					Этот сайт - некоммерческий проект ученика 11C класса Арсения
+					Покровского. Он был создан в рамках практической работы. Контакты
+					создателя: pokrovski.arseni@gmail.com
+				</div>
+			</div>
+		</div>
+
+		<!-- Image Preview Container -->
+		<div id="preview-container">
+			<button id="close-btn" onclick="closePreview()">Закрыть</button>
+			<img id="preview-image" src="" alt="Preview Image" />
+		</div>
+
+		<script>
+			// Функция открытия предварительного просмотра изображения
+			function openPreview(imageSrc) {
+				const previewContainer = document.getElementById('preview-container')
+				const previewImage = document.getElementById('preview-image')
+
+				previewImage.src = imageSrc
+				previewContainer.style.display = 'block'
+				document.body.style.overflow = 'hidden' // Запретить прокрутку при отображении предварительного просмотра
+			}
+
+			// Функция закрытия предварительного просмотра изображения
+			function closePreview() {
+				const previewContainer = document.getElementById('preview-container')
+
+				previewContainer.style.display = 'none'
+				document.body.style.overflow = 'auto' // Разрешить прокрутку, когда предварительный просмотр скрыт
+			}
+		</script>
+	</body>
+</html>

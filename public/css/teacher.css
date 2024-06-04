@@ -1,0 +1,20 @@
+.teacherHeader {
+	padding-bottom: 25px;
+	width: 100%;
+	font-family: Ysabeau;
+	color: #f0ead2;
+	text-align: center;
+}
+
+.teacherPic {
+	width: 100%;
+	height: auto;
+	border-radius: 15px;
+}
+
+.noteBlock {
+	padding: 25px;
+	border-radius: 20px;
+	background-color: #a98467;
+	color: #6c584c;
+}
